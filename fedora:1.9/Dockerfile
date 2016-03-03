@@ -3,8 +3,10 @@ MAINTAINER amitsaha.in@gmail.com
 
 ADD docker.repo /etc/yum.repos.d/docker.repo 
 
-# Install docker
-RUN dnf -y update && dnf -y install docker-engine && dnf clean all
+# Install doker
+RUN dnf -y update 
+RUN dnf -y install docker-engine-1.9.1 
+RUN dnf clean all
 
 # Install the magic wrapper.
 ADD ./wrapdocker /usr/local/bin/wrapdocker

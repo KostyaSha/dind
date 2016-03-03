@@ -1,5 +1,5 @@
 #!/bin/bash
 
 cp ../wrapdocker .
-docker build -t dind_fedora  .
+docker build -t dind_$(basename $(pwd))  .
 rm wrapdocker
